@@ -1,0 +1,21 @@
+.container {
+    margin-top: 6%;
+    height: 100%;
+}
+.min-box {
+    width: 50%;
+    text-align: center;
+}
+.max-box {
+    width: 50%;
+    text-align: center;
+    margin-left: 38%;
+}
+.apply-button {
+    margin-top: 10%;
+    border-radius: 29%;
+    width: 92%;
+}
+.range-slider {
+    margin-top: 30%;
+}

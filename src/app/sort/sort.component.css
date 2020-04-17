@@ -1,0 +1,14 @@
+.container {
+    margin-top: 6%;
+}
+.list-item {
+    display: inline;
+    margin-right: 5%;
+}
+.list {
+    list-style: none;
+    margin-right: 5%;
+}
+.selected {
+    color: royalblue;
+}

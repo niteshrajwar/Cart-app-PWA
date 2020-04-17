@@ -1,0 +1,10 @@
+<div class="container">
+  <span>
+  
+    <ul class="inline" class="list"> <span class="list"> <b>Sort By</b></span>
+      <li class="list-item active" [ngClass]="{'selected': (id === 1)}"><a role= button (click) = "sort(1)">Price High-Low</a></li>
+      <li class="list-item" [ngClass]="{'selected': (id === 2)}"><a (click) = "sort(2)">Price Low-High</a></li>
+      <li class="list-item" [ngClass]="{'selected': (id === 3)}"><a (click) = "sort(3)">Discount</a></li>
+    </ul>
+  </span>
+</div>

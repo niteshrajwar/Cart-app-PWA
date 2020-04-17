@@ -1,0 +1,41 @@
+<div  class="container-fluid cart-page">
+  <ul class="list row" *ngIf = "!noItemInCart" >
+    <li class="list-item col-2" *ngFor="let i of cartItems">
+      <div class="item">
+       <span><img class="image" alt="No image available" src={{i.img_url}}></span>
+       <span class="content">
+        <div><b>{{i.name}}</b></div><br>
+        <div>
+        <span><b>₹{{i.discountedPrice}}</b> </span>
+        <span class="original-price" *ngIf = "i.discount !== 0">₹{{i.price }}   </span>
+        <span class="discount" *ngIf = "i.discount !== 0"> {{i.discountPercentage | number : '1.2-2' }}% off</span>
+        <span class="quantity-control">
+          <button class="decrement" (click) = "decreaseQuantity(i)">-</button>
+          <input class="box" value = {{i.quantity}} type="text" readonly>
+          <button class="increment" (click) = "increaseQuantity(i)">+</button></span>
+          <button class="remove" (click) = "removeItem(i)">REMOVE</button>
+        </div>
+        </span>
+        </div>
+    </li>
+  </ul>
+  <div class="no-item" *ngIf = "noItemInCart">
+    <h2>No items in the cart</h2>
+  </div>
+  <div class="price-section" *ngIf = "!noItemInCart">
+    <div>
+    <h4>Price Details</h4> <hr>
+    <div>
+      Price ({{cartItems.length}} items) : <span class="price">₹{{totalPrice}}</span>
+    </div>
+    <div>
+      Discount : <span class="discount-price">₹{{discount}}</span>
+    </div>
+  </div>
+  <hr>
+    <div>
+    Total Payable : <span class="total-price">₹{{totalPrice - discount}}</span>
+  </div>
+  </div>
+</div>
+

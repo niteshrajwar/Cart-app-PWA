@@ -1,0 +1,16 @@
+<!-- <div class="input-group"> -->
+  <!-- <input type="text" class="form-control" placeholder="Search" value = "" id = "search">
+  <div class="input-group-append">
+    <button class="btn btn-success" type="submit" (click) = "search()"><i class="fas fa-search"></i></button>
+  </div> -->
+<form #searchForm = "ngForm" (ngSubmit)="onSubmit(searchForm.form.value)">
+  <div class="form-group">
+  <div class="input-group">
+<input type="text" class="form-control" id= "search" name="search" ngModel #search="ngModel" placeholder="search">
+<div class="input-group-append">
+<button class="btn btn-primary" type= "submit"><i class="fas fa-search"></i></button>
+</div>
+ </div>
+ </div>
+</form>
+<!-- </div> -->

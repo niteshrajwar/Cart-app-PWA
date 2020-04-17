@@ -1,0 +1,19 @@
+<div class="cart-section container-fluid">
+  <ul class="list row" >
+    <li class="list-item col-2" *ngFor="let i of items">
+      <div class="container-fluid item">
+        <img class="image" alt="No image available" src={{i.img_url}}>
+     
+      <div>
+        <span>{{i.name}}</span>
+      </div>
+      <div>
+        <span>₹{{i.discountedPrice}}   </span>
+        <span class="original-price" *ngIf = "i.discount !== 0">₹{{i.price }}   </span>
+        <span class="discount" *ngIf = "i.discount !== 0"> {{i.discountPercentage | number : '1.2-2' }}% off</span>
+      </div>
+        <button (click)="cartAddition(i)" class="btn btn-warning add-to-cart">Add To Cart</button>
+    </div>
+    </li>
+  </ul>
+</div>

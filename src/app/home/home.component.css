@@ -1,0 +1,49 @@
+.container {
+    margin-top: 6%;
+}
+.item {
+    width: 0%;
+    border: solid;
+    margin-left: 4%;
+    padding: 10%;
+
+}
+.filter {
+    height:100%;
+    background-color: cornflowerblue;
+}
+.list {
+    display:inline;
+}
+.image {
+    width: 14%;
+}
+.section {
+    border: lightslategrey;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        margin-top: 6%;
+    }
+    .item {
+        width: 0%;
+        border: solid;
+        margin-left: 4%;
+        padding: 10%;
+    
+    }
+    .filter {
+        height:100%;
+        background-color: cornflowerblue;
+    }
+    .list {
+        display:inline;
+    }
+    .image {
+        width: 14%;
+    }
+    .section {
+        border: lightslategrey;
+    }
+}

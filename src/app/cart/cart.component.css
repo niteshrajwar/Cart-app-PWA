@@ -1,0 +1,205 @@
+.cart-page {
+    width: 83%;
+    display: -webkit-inline-box;
+    margin-top: 10%;
+}
+.list-item {
+    display: contents
+}
+.list {
+    list-style: none;
+    width: 83%;
+    display: inline-block;
+}
+.image {
+    width: 39%;
+    height: 100%;
+    margin-bottom: 0%;
+    padding: 2%;
+    margin-right: 0%;
+}
+.item {
+    border: solid;
+    border-width: thin;
+    display: inline-flex;
+    margin-bottom: 2%;
+}
+.box {
+ width: 4%;
+ margin-left: 1%;
+ margin-right: 1%;
+ text-align: center;
+ font-weight: 700;
+}
+.price-section {
+  border: solid;
+  border-width: thin;
+  width: 24%;
+  padding: 1%;
+  height: 10%;
+  margin-left: -9%;
+}
+.no-item {
+    margin-top: 6%;
+}
+.original-price {
+    text-decoration: line-through;
+    margin-left: 2%
+}
+.discount {
+    color:green;
+    margin-left: 2%;
+    font-weight: 700;
+}
+.content {
+    margin-left: -32%;
+    margin-top: 4%;
+}
+.remove {
+    margin-left: 17%;
+    border: none;
+    font-weight: 700;
+    background-color: white;
+}
+.decrement {
+    background-color: white;
+    border: solid;
+    color: darkgrey;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: 900;
+
+}
+.increment {
+    background-color: white;
+    border: solid;
+    color: darkgrey;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: 900;
+}
+.quantity-control {
+    margin-left: 23%;
+}
+.price {
+ margin-left: 36%
+}
+.discount-price{
+  margin-left: 57%;
+}
+.total-price {
+margin-left: 40%;
+}
+
+@media screen and (max-width: 600px) {
+    .cart-page {
+        width: 115%;
+        margin-top: 31%;
+        display: inline-block;
+        margin-left: -8%;
+    }
+    .list-item {
+        display: contents
+    }
+    .list {
+        list-style: none;
+        width: 100%;
+        display: inline-block;
+    }
+    .image {
+        width: 39%;
+        height: 100%;
+        margin-bottom: 0%;
+        padding: 2%;
+        margin-right: 0%;
+    }
+    .item {
+        border: solid;
+        border-width: thin;
+        display: inline-flex;
+        margin-bottom: 2%;
+    }
+    .box {
+        width: 12%;
+         margin-left: 5%;
+           margin-right: 6%;
+         text-align: center;
+               font-weight: 600;
+    }
+    .price-section {
+        border: solid;
+        border-width: thin;
+        width: 89%;
+        padding: 1%;
+        height: 10%;
+        margin-left: 7%;
+    }
+    .no-item {
+        margin-top: 6%;
+    }
+    .original-price {
+        text-decoration: line-through;
+        margin-left: 2%
+    }
+    .discount {
+        color:green;
+        margin-left: 2%;
+        font-weight: 700;
+    }
+    .content {
+        margin-left: -39%;
+        margin-top: 4%;
+    }
+    .remove {
+        margin-left: 24%;
+        border: none;
+        font-weight: 700;
+        background-color: white;
+    }
+    .decrement {
+        background-color: white;
+        border: solid;
+        color: darkgrey;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 100%;
+        cursor: pointer;
+        border-radius: 50%;
+        font-weight: 900;
+    
+    }
+    .increment {
+        background-color: white;
+        border: solid;
+        color: darkgrey;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 100%;
+        cursor: pointer;
+        border-radius: 50%;
+        font-weight: 900;
+    }
+    .quantity-control {
+        margin-left: 16%;
+    }
+    .price {
+     margin-left: 36%
+    }
+    .discount-price{
+      margin-left: 57%;
+    }
+    .total-price {
+    margin-left: 40%;
+    }
+     
+}
