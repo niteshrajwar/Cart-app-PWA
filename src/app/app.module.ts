@@ -16,8 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
 import { SortComponent } from './sort/sort.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
- //import {RangeSliderModule} from 'ngx-rangeslider-component'
-
+import { Ng5SliderModule } from 'ng5-slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +33,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     AppRoutingModule,
     ReactiveFormsModule, FormsModule,
 HttpModule, HttpClientModule
-  //,RangeSliderModule
+, Ng5SliderModule
 ],
   providers: [UserService],
   bootstrap: [AppComponent]

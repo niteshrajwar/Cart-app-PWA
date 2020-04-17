@@ -1,12 +1,7 @@
 <div class="container">
- <h3> Filters </h3>
-  <input class="min-box" type="text"  value={{min}} [(ngModel)] = "min" />
+  <h3> Filters </h3>
   <div class="range-slider">
-  
-  <!-- <range-slider [min]="min" [max]="max" [step]="100" [(ngModel)]="twoWayRange" >        </range-slider>                        -->
-  <!-- <range-slider [min]="min" [max]="max" [toolTips]="[false,false]" [(ngModel)]="twoWayRange" (onRangeChange)="rangeChanged($event)">        </range-slider> -->
-                                                                        
+  <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
 </div>
-  <input class="max-box" type="text"  value={{max}} [(ngModel)] = "max"/>
-    <button class="btn-primary apply-button" (click)="filter()">Apply</button>
+  <button class="btn-primary apply-button" (click)="filter()">Apply</button>
 </div>

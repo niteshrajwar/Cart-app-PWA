@@ -25,9 +25,16 @@ export class UserService {
   constructor(private http: HttpClient, private _router: Router) {
   }
   public getItems = () => {
+    this.discountCalculation();
     return this.Items;
   }
   public publishItems(cartItems :any) {
    this.itemsArray.next(cartItems);
   }
+  discountCalculation() {
+    this.Items.map(item => {
+      item.discountedPrice = item.price - item.discount;
+      item.discountPercentage = item.discount/item.price *100;
+    })
+   }
 }

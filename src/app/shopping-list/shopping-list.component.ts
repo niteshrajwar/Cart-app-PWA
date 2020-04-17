@@ -20,7 +20,6 @@ export class ShoppingListComponent implements OnInit {
     this.subscriber = this._userService.itemsArray$.subscribe(data => {
       this.items = data ? data : [];
     })
-    this.discountCalculation(this.items);
   }
   cartAddition(itemDetails:any) {
      if (typeof window !== 'undefined' && localStorage) {
@@ -41,14 +40,6 @@ export class ShoppingListComponent implements OnInit {
      cart.push(itemDetails);
   }
   localStorage.setItem("Cart", JSON.stringify(cart));
-    }
-    
-  }
-  discountCalculation(items) {
-   this.items.map(item => {
-     item.discountedPrice = item.price - item.discount;
-     item.discountPercentage = item.discount/item.price *100;
-   })
-   this._userService.publishItems(this.items);
+    } 
   }
 }

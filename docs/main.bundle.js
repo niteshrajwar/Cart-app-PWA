@@ -46,7 +46,7 @@ var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
             exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
         })
@@ -134,6 +134,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__filter_filter_component__ = __webpack_require__("../../../../../src/app/filter/filter.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__sort_sort_component__ = __webpack_require__("../../../../../src/app/sort/sort.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shopping_list_shopping_list_component__ = __webpack_require__("../../../../../src/app/shopping-list/shopping-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ng5_slider__ = __webpack_require__("../../../../ng5-slider/esm5/ng5-slider.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -155,12 +156,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-//import {RangeSliderModule} from 'ngx-rangeslider-component'
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__home_home_component__["a" /* HomeComponent */],
@@ -174,9 +175,9 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_6__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_7__angular_common_http__["b" /* HttpClientModule */]
-                //,RangeSliderModule
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_7__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_15_ng5_slider__["a" /* Ng5SliderModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_5__user_service__["a" /* UserService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
@@ -400,7 +401,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container {\r\n    margin-top: 6%;\r\n    height: 100%;\r\n}\r\n.min-box {\r\n    width: 50%;\r\n    text-align: center;\r\n}\r\n.max-box {\r\n    width: 50%;\r\n    text-align: center;\r\n    margin-left: 38%;\r\n}\r\n.apply-button {\r\n    margin-top: 10%;\r\n    border-radius: 29%;\r\n    width: 92%;\r\n}\r\n.range-slider {\r\n    margin-top: 30%;\r\n}\r\n@media screen and (max-width :500px) {\r\n    .container {\r\n        margin-top: 6%;\r\n    height: 87%;\r\n    position: absolute;\r\n    padding: 5%;\r\n  }\r\n    .min-box {\r\n        width: 100%;\r\n        height: 1%;\r\n        text-align: center;\r\n        margin-top: 25%;\r\n    }\r\n    .max-box {\r\n        width: 100%;\r\n    text-align: center;\r\n    margin-left: 0%;\r\n    }\r\n    .apply-button {\r\n        margin-top: 37%;\r\n        border-radius: 31%;\r\n        width: 154%;\r\n    }\r\n    .range-slider {\r\n        margin-top: 30%;\r\n    }\r\n}", ""]);
+exports.push([module.i, ".container {\r\n    margin-top: 6%;\r\n    height: 100%;\r\n}\r\n.min-box {\r\n    width: 50%;\r\n    text-align: center;\r\n}\r\n.max-box {\r\n    width: 50%;\r\n    text-align: center;\r\n    margin-left: 38%;\r\n}\r\n.apply-button {\r\n    margin-top: 10%;\r\n    border-radius: 29%;\r\n    width: 92%;\r\n}\r\n.range-slider {\r\n    margin-top: 30%;\r\n}\r\n@media screen and (max-width :500px) {\r\n    .container {\r\n        margin-top: 6%;\r\n    height: 87%;\r\n    position: absolute;\r\n    padding: 5%;\r\n  }\r\n    .min-box {\r\n        width: 100%;\r\n        height: 1%;\r\n        text-align: center;\r\n        margin-top: 25%;\r\n    }\r\n    .max-box {\r\n        width: 100%;\r\n    text-align: center;\r\n    margin-left: 0%;\r\n    }\r\n    .apply-button {\r\n        margin-top: 37%;\r\n        border-radius: 31%;\r\n        width: 154%;\r\n    }\r\n    .range-slider {\r\n        margin-top: 30%;\r\n        width: 150%;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -413,7 +414,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/filter/filter.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n <h3> Filters </h3>\n  <input class=\"min-box\" type=\"text\"  value={{min}} [(ngModel)] = \"min\" />\n  <div class=\"range-slider\">\n  \n  <!-- <range-slider [min]=\"min\" [max]=\"max\" [step]=\"100\" [(ngModel)]=\"twoWayRange\" >        </range-slider>                        -->\n  <!-- <range-slider [min]=\"min\" [max]=\"max\" [toolTips]=\"[false,false]\" [(ngModel)]=\"twoWayRange\" (onRangeChange)=\"rangeChanged($event)\">        </range-slider> -->\n                                                                        \n</div>\n  <input class=\"max-box\" type=\"text\"  value={{max}} [(ngModel)] = \"max\"/>\n    <button class=\"btn-primary apply-button\" (click)=\"filter()\">Apply</button>\n</div>"
+module.exports = "<div class=\"container\">\n  <h3> Filters </h3>\n  <div class=\"range-slider\">\n  <ng5-slider [(value)]=\"minValue\" [(highValue)]=\"maxValue\" [options]=\"options\"></ng5-slider>\n</div>\n  <button class=\"btn-primary apply-button\" (click)=\"filter()\">Apply</button>\n</div>"
 
 /***/ }),
 
@@ -443,24 +444,23 @@ var FilterComponent = /** @class */ (function () {
         this.twoWayRange = [0, 800];
         this.step = 5;
         this.items = null;
+        this.minValue = 0;
+        this.maxValue = 1000;
+        this.options = {
+            floor: 0,
+            ceil: 1000,
+            translate: function (value) {
+                return '₹' + value;
+            }
+        };
     }
     FilterComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.subscriber = this._userService.itemsArray$.subscribe(function (data) {
-            _this.items = data ? data : null;
-        });
-        if (!this.items) {
-            this.items = this._userService.getItems();
-        }
-    };
-    FilterComponent.prototype.rangeChanged = function (e) {
-        this.min = e[0];
-        this.max = e[1];
     };
     FilterComponent.prototype.filter = function () {
         var _this = this;
+        this.items = this._userService.getItems();
         this.items = this.items.filter(function (item) {
-            return (item.discountedPrice >= _this.min && item.discountedPrice <= _this.max);
+            return (item.discountedPrice >= _this.minValue && item.discountedPrice <= _this.maxValue);
         });
         this._userService.publishItems(this.items);
     };
@@ -682,8 +682,8 @@ var SearchComponent = /** @class */ (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('searchForm'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* NgForm */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('searchForm'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* NgForm */])
     ], SearchComponent.prototype, "ngForm", void 0);
     SearchComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -754,7 +754,6 @@ var ShoppingListComponent = /** @class */ (function () {
         this.subscriber = this._userService.itemsArray$.subscribe(function (data) {
             _this.items = data ? data : [];
         });
-        this.discountCalculation(this.items);
     };
     ShoppingListComponent.prototype.cartAddition = function (itemDetails) {
         if (typeof window !== 'undefined' && localStorage) {
@@ -777,13 +776,6 @@ var ShoppingListComponent = /** @class */ (function () {
             }
             localStorage.setItem("Cart", JSON.stringify(cart));
         }
-    };
-    ShoppingListComponent.prototype.discountCalculation = function (items) {
-        this.items.map(function (item) {
-            item.discountedPrice = item.price - item.discount;
-            item.discountPercentage = item.discount / item.price * 100;
-        });
-        this._userService.publishItems(this.items);
     };
     ShoppingListComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -930,14 +922,21 @@ var UserService = /** @class */ (function () {
         this.itemsArray = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](__WEBPACK_IMPORTED_MODULE_5__cart_js__["a" /* items */]);
         this.itemsArray$ = this.itemsArray.asObservable();
         this.getItems = function () {
+            _this.discountCalculation();
             return _this.Items;
         };
     }
     UserService.prototype.publishItems = function (cartItems) {
         this.itemsArray.next(cartItems);
     };
+    UserService.prototype.discountCalculation = function () {
+        this.Items.map(function (item) {
+            item.discountedPrice = item.price - item.discount;
+            item.discountPercentage = item.discount / item.price * 100;
+        });
+    };
     UserService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]])
     ], UserService);
     return UserService;
@@ -977,7 +976,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
