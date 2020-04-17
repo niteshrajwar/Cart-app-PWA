@@ -16,7 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
 import { SortComponent } from './sort/sort.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-// import {RangeSliderModule} from 'ngx-rangeslider-component'
+ //import {RangeSliderModule} from 'ngx-rangeslider-component'
 
 @NgModule({
   declarations: [
