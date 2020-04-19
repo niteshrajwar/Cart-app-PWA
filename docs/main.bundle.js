@@ -491,7 +491,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\r\n  background-color: blue;\r\n}\r\n.icons {\r\n  color: white\r\n}\r\n.search {}\r\n.cart-count {\r\n  height: 15px;\r\n  width: 18px;\r\n  background-color: red;\r\n  border-radius: 76%;\r\n  position: absolute;\r\n  margin-top: -6px;\r\n  margin-left: -6px;\r\n  border: none;\r\n  text-align: center;\r\n  font-weight: 700;\r\n}\r\n@media screen and (max-width: 500px) {\r\n  .cart-count {\r\n    height: 15px;\r\n    width: 18px;\r\n    background-color: red;\r\n    border-radius: 76%;\r\n    display: inline-block;\r\n    position: absolute;\r\n    margin-top: -6px;\r\n    margin-left: -6px\r\n  }\r\n}", ""]);
+exports.push([module.i, ".header {\r\n  background-color: blue;\r\n}\r\n.icons {\r\n  color: white\r\n}\r\n.search {}\r\n.cart-count {\r\n  height: 15px;\r\n  width: 18px;\r\n  background-color: red;\r\n  border-radius: 76%;\r\n  position: absolute;\r\n  margin-top: -6px;\r\n  margin-left: -6px;\r\n  border: none;\r\n  text-align: center;\r\n  font-weight: 700;\r\n  color: white;\r\n \r\n}\r\n@media screen and (max-width: 500px) {\r\n  .cart-count {\r\n    height: 15px;\r\n    width: 18px;\r\n    background-color: red;\r\n    border-radius: 76%;\r\n    display: inline-block;\r\n    position: absolute;\r\n    margin-top: -6px;\r\n    margin-left: -6px;\r\n    color: white;\r\n  }\r\n}", ""]);
 
 // exports
 
@@ -534,7 +534,6 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
         var _this = this;
-        debugger;
         if (typeof window !== 'undefined' && localStorage && localStorage.getItem("Cart")) {
             var cartItems = JSON.parse(localStorage.getItem("Cart"));
             this.cartItemCount = cartItems ? cartItems.length : 0;
