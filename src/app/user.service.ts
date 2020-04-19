@@ -22,19 +22,24 @@ export class UserService {
   private userList = new Subject<User[]>();
   private itemsArray = new BehaviorSubject<[]>(items);
   public itemsArray$ = this.itemsArray.asObservable();
+  private cartItemsArray = new BehaviorSubject<[]>(null);
+  public cartItemsArray$ = this.cartItemsArray.asObservable();
   constructor(private http: HttpClient, private _router: Router) {
   }
   public getItems = () => {
     this.discountCalculation();
     return this.Items;
   }
-  public publishItems(cartItems :any) {
-   this.itemsArray.next(cartItems);
+  public publishItems(items :any) {
+   this.itemsArray.next(items);
   }
   discountCalculation() {
     this.Items.map(item => {
       item.discountedPrice = item.price - item.discount;
       item.discountPercentage = item.discount/item.price *100;
     })
+   }
+   public publishCartAddition(cartItems) {
+     this.cartItemsArray.next(cartItems);
    }
 }

@@ -39,6 +39,7 @@ export class ShoppingListComponent implements OnInit {
     itemDetails.quantity = 1;
      cart.push(itemDetails);
   }
+  this._userService.publishCartAddition(cart);
   localStorage.setItem("Cart", JSON.stringify(cart));
     } 
   }

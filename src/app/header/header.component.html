@@ -5,7 +5,7 @@
        <app-search></app-search>
     </li>
     <li class="nav-item">
-      <a class="nav-link icons" routerLink = "/cart"><i class="fas fa-shopping-cart"></i></a>
+      <a class="nav-link icons" routerLink = "/cart"><i class="fas fa-shopping-cart"><input *ngIf = "cartItemCount > 0" type="text" class="cart-count" value={{cartItemCount}}></i></a>
     </li>
   </ul>
 </nav>

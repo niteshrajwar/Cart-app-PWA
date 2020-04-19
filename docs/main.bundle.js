@@ -298,6 +298,7 @@ module.exports = "<div  class=\"container-fluid cart-page\">\n  <ul class=\"list
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service__ = __webpack_require__("../../../../../src/app/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -308,8 +309,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var CartComponent = /** @class */ (function () {
-    function CartComponent() {
+    function CartComponent(_userService) {
+        this._userService = _userService;
         this.noItemInCart = true;
         this.cartItems = [];
         this.totalPrice = 0;
@@ -375,6 +378,7 @@ var CartComponent = /** @class */ (function () {
     };
     CartComponent.prototype.updateCartInStorage = function (cartItems) {
         if (typeof window !== 'undefined' && localStorage) {
+            this._userService.publishCartAddition(cartItems);
             localStorage.setItem("Cart", JSON.stringify(cartItems));
         }
     };
@@ -384,7 +388,7 @@ var CartComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/cart/cart.component.html"),
             styles: [__webpack_require__("../../../../../src/app/cart/cart.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__user_service__["a" /* UserService */]])
     ], CartComponent);
     return CartComponent;
 }());
@@ -487,7 +491,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\r\n  background-color: blue;\r\n}\r\n.icons {\r\n  color: white\r\n}\r\n.search {}", ""]);
+exports.push([module.i, ".header {\r\n  background-color: blue;\r\n}\r\n.icons {\r\n  color: white\r\n}\r\n.search {}\r\n.cart-count {\r\n  height: 15px;\r\n  width: 18px;\r\n  background-color: red;\r\n  border-radius: 76%;\r\n  position: absolute;\r\n  margin-top: -6px;\r\n  margin-left: -6px;\r\n  border: none;\r\n  text-align: center;\r\n  font-weight: 700;\r\n}\r\n@media screen and (max-width: 500px) {\r\n  .cart-count {\r\n    height: 15px;\r\n    width: 18px;\r\n    background-color: red;\r\n    border-radius: 76%;\r\n    display: inline-block;\r\n    position: absolute;\r\n    margin-top: -6px;\r\n    margin-left: -6px\r\n  }\r\n}", ""]);
 
 // exports
 
@@ -500,7 +504,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar header fixed-top\">\n  <span class=\"navbar-text inline\"><a class=\"icons\" routerLink=\"/\"><i class=\"fas fa-star\"></i></a></span>\n  <ul class=\"nav justify-content-end\">\n    <li class=\"nav-item search\">\n       <app-search></app-search>\n    </li>\n    <li class=\"nav-item\">\n      <a class=\"nav-link icons\" routerLink = \"/cart\"><i class=\"fas fa-shopping-cart\"></i></a>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"navbar header fixed-top\">\n  <span class=\"navbar-text inline\"><a class=\"icons\" routerLink=\"/\"><i class=\"fas fa-star\"></i></a></span>\n  <ul class=\"nav justify-content-end\">\n    <li class=\"nav-item search\">\n       <app-search></app-search>\n    </li>\n    <li class=\"nav-item\">\n      <a class=\"nav-link icons\" routerLink = \"/cart\"><i class=\"fas fa-shopping-cart\"><input *ngIf = \"cartItemCount > 0\" type=\"text\" class=\"cart-count\" value={{cartItemCount}}></i></a>\n    </li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -526,10 +530,18 @@ var HeaderComponent = /** @class */ (function () {
     function HeaderComponent(_userService) {
         this._userService = _userService;
         this.userInfo = null;
+        this.cartItemCount = 0;
     }
     HeaderComponent.prototype.ngOnInit = function () {
-    };
-    HeaderComponent.prototype.logOut = function () {
+        var _this = this;
+        debugger;
+        if (typeof window !== 'undefined' && localStorage && localStorage.getItem("Cart")) {
+            var cartItems = JSON.parse(localStorage.getItem("Cart"));
+            this.cartItemCount = cartItems ? cartItems.length : 0;
+        }
+        this.subscriber = this._userService.cartItemsArray$.subscribe(function (data) {
+            _this.cartItemCount = data ? data.length : _this.cartItemCount;
+        });
     };
     HeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -774,6 +786,7 @@ var ShoppingListComponent = /** @class */ (function () {
                 itemDetails.quantity = 1;
                 cart.push(itemDetails);
             }
+            this._userService.publishCartAddition(cart);
             localStorage.setItem("Cart", JSON.stringify(cart));
         }
     };
@@ -921,19 +934,24 @@ var UserService = /** @class */ (function () {
         this.userList = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */]();
         this.itemsArray = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](__WEBPACK_IMPORTED_MODULE_5__cart_js__["a" /* items */]);
         this.itemsArray$ = this.itemsArray.asObservable();
+        this.cartItemsArray = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](null);
+        this.cartItemsArray$ = this.cartItemsArray.asObservable();
         this.getItems = function () {
             _this.discountCalculation();
             return _this.Items;
         };
     }
-    UserService.prototype.publishItems = function (cartItems) {
-        this.itemsArray.next(cartItems);
+    UserService.prototype.publishItems = function (items) {
+        this.itemsArray.next(items);
     };
     UserService.prototype.discountCalculation = function () {
         this.Items.map(function (item) {
             item.discountedPrice = item.price - item.discount;
             item.discountPercentage = item.discount / item.price * 100;
         });
+    };
+    UserService.prototype.publishCartAddition = function (cartItems) {
+        this.cartItemsArray.next(cartItems);
     };
     UserService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),

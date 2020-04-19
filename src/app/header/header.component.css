@@ -5,3 +5,28 @@
   color: white
 }
 .search {}
+.cart-count {
+  height: 15px;
+  width: 18px;
+  background-color: red;
+  border-radius: 76%;
+  position: absolute;
+  margin-top: -6px;
+  margin-left: -6px;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .cart-count {
+    height: 15px;
+    width: 18px;
+    background-color: red;
+    border-radius: 76%;
+    display: inline-block;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: -6px
+  }
+}

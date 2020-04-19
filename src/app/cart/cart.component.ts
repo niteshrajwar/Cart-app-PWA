@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +11,7 @@ export class CartComponent implements OnInit {
  public cartItems = [];
  public totalPrice = 0;
  public discount = 0;
-  constructor() { }
+  constructor(private _userService: UserService) { }
 
   ngOnInit() {
     if (typeof window !== 'undefined' && localStorage && localStorage.getItem("Cart")) {
@@ -70,6 +71,7 @@ export class CartComponent implements OnInit {
   }
   updateCartInStorage(cartItems) {
     if(typeof window !== 'undefined' && localStorage) {
+      this._userService.publishCartAddition(cartItems);
       localStorage.setItem("Cart", JSON.stringify(cartItems))
     }
   }
