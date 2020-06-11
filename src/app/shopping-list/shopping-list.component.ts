@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
-  private items = [];
+  public items = [];
   public subscriber: Subscription;
   constructor(
     private _userService: UserService
@@ -22,6 +22,7 @@ export class ShoppingListComponent implements OnInit {
     })
   }
   cartAddition(itemDetails:any) {
+    console.log(itemDetails)
      if (typeof window !== 'undefined' && localStorage) {
         const cart = localStorage.getItem('Cart') ? JSON.parse(localStorage.getItem("Cart")) : [];
         if(cart.length > 0) {

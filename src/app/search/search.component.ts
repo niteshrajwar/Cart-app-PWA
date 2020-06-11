@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class SearchComponent implements OnInit {
  public items = [];
  formChangesSubscription: any;
-  @ViewChild('searchForm') ngForm: NgForm;
+  @ViewChild('searchForm', { static: true }) ngForm: NgForm;
   constructor(private _userService:UserService) { }
 
   ngOnInit() {
