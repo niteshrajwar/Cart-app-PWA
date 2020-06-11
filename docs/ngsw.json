@@ -21,7 +21,7 @@
       ],
       "patterns": [
         "https:\\/\\/kit\\.fontawesome\\.com\\/a076d05399\\.js",
-        "https:\\/\\/lorempixel\\.com\\/500\\/600\\/technics\\/"
+        "http:\\/\\/lorempixel\\.com\\/500\\/600\\/technics\\/"
       ]
     },
     {
