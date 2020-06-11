@@ -8,16 +8,16 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/favicon.ico",
-        "/index.html",
-        "/main-es2015.15a875fe4105d5c09310.js",
-        "/main-es5.15a875fe4105d5c09310.js",
-        "/manifest.webmanifest",
-        "/polyfills-es2015.3dbc83d7cd027bd68f77.js",
-        "/polyfills-es5.37aa429643ec17ff7ed3.js",
-        "/runtime-es2015.1eba213af0b233498d9d.js",
-        "/runtime-es5.1eba213af0b233498d9d.js",
-        "/styles.3ff695c00d717f2d2a11.css"
+        "/Cart-app-PWA/favicon.ico",
+        "/Cart-app-PWA/index.html",
+        "/Cart-app-PWA/main-es2015.15a875fe4105d5c09310.js",
+        "/Cart-app-PWA/main-es5.15a875fe4105d5c09310.js",
+        "/Cart-app-PWA/manifest.webmanifest",
+        "/Cart-app-PWA/polyfills-es2015.3dbc83d7cd027bd68f77.js",
+        "/Cart-app-PWA/polyfills-es5.37aa429643ec17ff7ed3.js",
+        "/Cart-app-PWA/runtime-es2015.1eba213af0b233498d9d.js",
+        "/Cart-app-PWA/runtime-es5.1eba213af0b233498d9d.js",
+        "/Cart-app-PWA/styles.3ff695c00d717f2d2a11.css"
       ],
       "patterns": [
         "https:\\/\\/kit\\.fontawesome\\.com\\/a076d05399\\.js",
