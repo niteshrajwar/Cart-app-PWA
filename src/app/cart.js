@@ -5,7 +5,7 @@ export const items = [
     "price": 200,
     "discount": 10,
     "category": "fiction",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9091,
@@ -13,7 +13,7 @@ export const items = [
     "price": 250,
     "discount": 15,
     "category": "literature",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9092,
@@ -21,7 +21,7 @@ export const items = [
     "price": 320,
     "discount": 5,
     "category": "literature",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9093,
@@ -29,7 +29,7 @@ export const items = [
     "price": 290,
     "discount": 0,
     "category": "thriller",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9094,
@@ -37,7 +37,7 @@ export const items = [
     "price": 500,
     "discount": 25,
     "category": "thriller",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9095,
@@ -45,7 +45,7 @@ export const items = [
     "price": 150,
     "discount": 5,
     "category": "literature",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9096,
@@ -53,7 +53,7 @@ export const items = [
     "price": 700,
     "discount": 22,
     "category": "literature",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   },
   {
     "id": 9097,
@@ -61,7 +61,7 @@ export const items = [
     "price": 350,
     "discount": 18,
     "category": "fiction",
-    "img_url": "http://lorempixel.com/500/600/technics/"
+    "img_url": "https://lorempixel.com/500/600/technics/"
   }
 ]
 

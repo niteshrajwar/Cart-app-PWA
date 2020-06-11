@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1591906086073,
+  "timestamp": 1591909895693,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.d0ff83d6510d65b3c39d.js",
-        "/main-es5.d0ff83d6510d65b3c39d.js",
+        "/main-es2015.15a875fe4105d5c09310.js",
+        "/main-es5.15a875fe4105d5c09310.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.3dbc83d7cd027bd68f77.js",
         "/polyfills-es5.37aa429643ec17ff7ed3.js",
@@ -20,7 +20,8 @@
         "/styles.3ff695c00d717f2d2a11.css"
       ],
       "patterns": [
-        "https:\\/\\/kit\\.fontawesome\\.com\\/a076d05399\\.js"
+        "https:\\/\\/kit\\.fontawesome\\.com\\/a076d05399\\.js",
+        "https:\\/\\/lorempixel\\.com\\/500\\/600\\/technics\\/"
       ]
     },
     {
@@ -61,9 +62,9 @@
     "/assets/notebook.jpg": "0393ec0b21dfbf54f97a6ad7c4d65bda6de8884b",
     "/assets/userdata.json": "025dad274f6be8c352cd52c9a121f7e51807ec69",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "5c9c8291c413d5affcbec0ada44ac04545341af4",
-    "/main-es2015.d0ff83d6510d65b3c39d.js": "8f3372b4e484bca53e4576b8da06e935b05aec95",
-    "/main-es5.d0ff83d6510d65b3c39d.js": "6d37d0f18529db861211b7448ffec297bc0db5c7",
+    "/index.html": "138195986423423210a6b3be6bd9a7e65d7f71f2",
+    "/main-es2015.15a875fe4105d5c09310.js": "9bc76d9df9521246903bce49a1d81ff762ca0d45",
+    "/main-es5.15a875fe4105d5c09310.js": "caf551c80576e8ba055e983cf9e64d7481a18950",
     "/manifest.webmanifest": "c20c2c108df6223a28e02a50fefa714dbedea2d1",
     "/polyfills-es2015.3dbc83d7cd027bd68f77.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/polyfills-es5.37aa429643ec17ff7ed3.js": "0aee34bd067d5a6a0a61ef2245421f87998eda1b",
